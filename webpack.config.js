@@ -3,18 +3,23 @@
 const path                 = require('path'),
       webpack              = require('webpack'),
       HtmlWebpackPlugin    = require('html-webpack-plugin'),
-      MiniCssExtractPlugin = require('mini-css-extract-plugin');
+      MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+      CopyWebpackPlugin    = require('copy-webpack-plugin');
 
-const devMode = process.env.NODE_ENV !== 'production';
+const PATHS = {
+    src: path.join(__dirname, './src'),
+    build: path.join(__dirname, './build'),
+    assets: 'static/'
+};
 
 module.exports = {
     entry: [
-        './src/public/script/index.js',
-        './src/public/style/index.css'
+        `${PATHS.src}/public/script/index.js`,
+        `${PATHS.src}/public/style/index.css`
     ],
     output: {
-        path: path.resolve(__dirname, 'build'),
-        filename: './static/script/script.bundle.js',
+        path: path.resolve(__dirname, PATHS.build),
+        filename: `${PATHS.assets}script/script.bundle.js`,
     },
     devtool: "source-map",
     module: {
@@ -49,7 +54,7 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        name: 'static/img/**/[name].[ext]',
+                        name: '[name].[ext]',
                     }
                 }]
             },
@@ -60,17 +65,20 @@ module.exports = {
         extensions: ['.js', '.html', '.css']
     },
     plugins: [
-        new MiniCssExtractPlugin({filename: "static/style/style.bundle.css"}),
+        new MiniCssExtractPlugin({filename: `${PATHS.assets}style/style.bundle.css`}),
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
-            template: './src/index.html',
+            template: `${PATHS.src}/index.html`,
             filename: 'index.html'
         }),
         new webpack.ProvidePlugin({
-            $: './src/public/libs/jquery.min.js',
-            jQuery: './src/public/libs/jquery.min.js',
-            'window.$': './src/public/libs/jquery.min.js'
-        })
+            $: `${PATHS.src}/public/libs/jquery.min.js`,
+            jQuery: `${PATHS.src}/public/libs/jquery.min.js`,
+            'window.$': `${PATHS.src}/public/libs/jquery.min.js`
+        }),
+        new CopyWebpackPlugin([
+            { from: `${PATHS.src}/public/img`, to: `${PATHS.assets}img` }
+        ])
     ]
 }

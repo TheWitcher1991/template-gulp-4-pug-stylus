@@ -24,5 +24,5 @@ $ gulp
 
 To build the project
 ```
-$ yarn build-webpack | npm run build-webpack
+$ yarn build | npm run build
 ```

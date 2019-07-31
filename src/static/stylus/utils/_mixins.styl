@@ -1,3 +1,28 @@
+/* Block */
+page($size1, $size2, $over)
+	width: $size1
+	height: $size1
+	margin: $size2
+	padding: $size2
+	font: $font-website
+	background-color: $bg-website
+	min-width: $small-site
+	color: $fg-website
+	overflow-x: $over
+
+wrapper($dis, $dir, $it, $width, $height)
+	display: $dis
+	flex-direction: $dir
+	align-items: $it
+	width: $width
+	height: $height
+
+main($margin, $padding, $pos, $width)
+	margin: $margin
+	padding: $padding
+	position: $pos
+	width: $width
+
 /* Additional */
 prefix($name, $value)
 	for $key in $vendors

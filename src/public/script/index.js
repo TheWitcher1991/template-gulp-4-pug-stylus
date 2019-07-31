@@ -1,9 +1,9 @@
 /* eslint-env node, mocha */
 
-// import $ from 'jquery' (from webpack)
+//import $ from 'jquery';
 
 $(document).ready(() => {
     'use strict';
 
-    const $page = $('html, body');
+    console.log('hello!');
 });

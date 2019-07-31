@@ -1,8 +1,25 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "template",
+  "main": "webpack.config.js",
+  "private": true,
+  "scripts": {
+    "watch-webpack": "webpack --mode production --watch",
+    "build-webpack": "webpack --mode production",
+    "watch-babel": "babel src/static/js -d src/public/script --presets es2015 -w",
+    "build-babel": "babel src/static/js -d src/public/script --presets es2015",
+    "stylus": "gulp styles",
+    "server": "gulp serve",
+    "pug": "gulp pug",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashot Svazyan <ashot.svazyan222@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheWitcher1991/template-gulp-4-pug-stylus"
+  },
   "devDependencies": {
     "babel-loader": "^8.0.6",
     "babel-preset-es2015": "^6.24.1",
@@ -16,6 +33,7 @@
     "file-loader": "^4.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
+    "gulp-load-plugins": "^2.0.0",
     "gulp-pug": "^4.0.1",
     "gulp-pug-inheritance": "^0.2.1",
     "gulp-stylus": "^2.7.0",

@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* 1. NORMALINE */
+/* ============================================================================================================== */
+article,
+aside,
+details,
+main,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -apple-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -rim-box-sizing: border-box;
+  -xv-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body {
+  background: #f1f1f1;
+  color: #333;
+}
+/* 2. FORM */
+/* ============================================================================================================== */
+textarea {
+  outline: none;
+  resize: none;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  outline: none;
+  border: none;
+}
+/* 3. BUTTON */
+/* ============================================================================================================== */
+button,
+input[type="button"],
+input[type="submit"] {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+/* 4. MAIN */
+/* ============================================================================================================== */
+/* 5. HEADER */
+/* ============================================================================================================== */
+/* 6. ARTICLE */
+/* ============================================================================================================== */
+/* 7. FOOTER */
+/* ============================================================================================================== */
+/* 8. MEDIA */
+/* ============================================================================================================== */
+@media only screen and (max-width: 400px) and (orientation: landscape) {
+  body {
+    color: #333;
+  }
+}
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+  body {
+    color: #333;
+  }
+}
+@media only screen and (max-width: 560px) and (orientation: landscape) {
+  body {
+    color: #333;
+  }
+}
+@media only screen and (max-width: 640px) and (orientation: landscape) {
+  body {
+    color: #333;
+  }
+}
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  body {
+    color: #333;
+  }
+}
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+  body {
+    color: #333;
+  }
+}
+@media only screen and (max-width: 1248px) and (orientation: landscape) {
+  body {
+    color: #333;
+  }
+}
+@media only screen and (max-width: 1440px) and (orientation: landscape) {
+  body {
+    color: #333;
+  }
+}

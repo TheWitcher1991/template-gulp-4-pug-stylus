@@ -19,7 +19,6 @@ If you don't wish to clone, you can [download the source code](https://github.co
 
 To start development
 ```
-$ gulp pug
 $ gulp 
 ```
 

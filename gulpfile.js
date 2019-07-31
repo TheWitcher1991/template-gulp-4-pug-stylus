@@ -27,7 +27,7 @@ gulp.task('serve', () => {
 });
 
 gulp.task('pug', () => {
-    return gulp.src('./src/static/pug/**/*.pug')
+    return gulp.src('./src/static/pug/index.pug')
         .pipe(inheritance({basedir: './src/static/pug/', skip: 'node_modules'}))
         .pipe(pug({
             pretty: true

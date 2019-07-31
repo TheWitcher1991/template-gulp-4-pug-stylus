@@ -1,17 +1,17 @@
-include ../utils/vars.pug
+include ../utils/_vars.pug
 
-<!DOCTYPE html>
+doctype
 <!--[if lt IE 9]><itemscope itemtype="https://schema.org/WebPage" html class="no-js ie ie9" lang="ru-Ru" prefix="og: http://ogp.me/ns#" dir="ltr"><![endif]-->
 <!--[if IE 8]><itemscope itemtype="https://schema.org/WebPage" html class="no-js ie ie8" lang="ru-Ru" prefix="og: http://ogp.me/ns#" dir="ltr"><![endif]-->
 <!--[if IE 7]><itemscope itemtype="https://schema.org/WebPage" html class="no-js ie ie7" lang="ru-Ru" prefix="og: http://ogp.me/ns#" dir="ltr"><![endif]-->
 <!--[if IE 6]><itemscope itemtype="https://schema.org/WebPage" html class="no-js ie ie6" lang="ru-Ru" prefix="og: http://ogp.me/ns#" dir="ltr"><![endif]-->
 <!--[if (gte IE 10)|!(IE)]><!-->
 html(itemscope itemtype="https://schema.org/WebPage" class="no-js no-ie" lang="ru" prefix="og: http://ogp.me/ns#" dir="ltr")
-<!--<![endif]-->
     head
         // Meta tags 
         meta(charset="UTF-8")
         title #{title}
+
 
         meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="IE=Edge, chrome=1")
@@ -43,15 +43,16 @@ html(itemscope itemtype="https://schema.org/WebPage" class="no-js no-ie" lang="r
         // Content website
         .wrapper
             // Header website
-            include ../modules/header.pug
+            include ../modules/_header.pug
 
             // Article website
-            include ../modules/article.pug
+            include ../modules/_article.pug
 
             // Footer website
-            include ../modules/footer.pug
+            include ../modules/_footer.pug
 
         // Common scripts
         script(type="text/javascript", src="public/libs/jquery.min.js")
         script.
-            jQuery.browser ? window.$5 = function (html5) {return jQuery(innerShiv(html5, false))} : window.$5 = function (html5) {return jQuery(html5)}
+            jQuery.browser ? window.$5 = function (html5) {return jQuery(innerShiv(html5, false))} : window.$5 = function (html5) {return jQuery(html5)};
+<!--<![endif]-->

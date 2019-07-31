@@ -9,7 +9,7 @@ or [Yarn](https://yarnpkg.com)
 
 ```bash
 $ git clone https://github.com/TheWitcher1991/template-gulp-4-pug-stylus
-$ cd myWebsite
+$ cd template-gulp-4-pug-stylus
 $ npm install | yarn install
 ```
 

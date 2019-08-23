@@ -45,5 +45,9 @@
     "webpack": "^4.38.0",
     "webpack-cli": "^3.3.6"
   },
-  "dependencies": {}
+  "devEngines": {
+    "node": ">= 10.x",
+    "npm": ">= 6.x",
+    "yarn": ">= 1.15.2"
+  }
 }

@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ashot Svazyan <ashot.svazyan222@gmail.com>",
-  "license": "MIT",
+  "license": "GNU GPL",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TheWitcher1991/template-gulp-4-pug-stylus"
